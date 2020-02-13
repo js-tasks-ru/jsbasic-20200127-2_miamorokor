@@ -10,4 +10,3 @@ function factorial(f){
 }
 x=0;
 y=factorial(x);
-console.log(y);
