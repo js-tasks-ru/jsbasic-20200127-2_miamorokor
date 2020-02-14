@@ -1,9 +1,3 @@
-## Допишите функцию валидации имени пользователя ##
-
-Необходимо, чтобы на сайте можно было поприветствовать только пользователей,
-которые удовлетворяют следующему условию - *имя не пустое, без пробелов, минимум 4 символа*.
-
-```js
 /**
  * Эту функцию трогать не нужно
  */
@@ -16,6 +10,17 @@ function print(text) {
  * чтобы функция sayHello работала корректно
  */
 function isValid(name) {
+  if(name==null){ 
+    return false;
+  }else if(name==""){
+    return false;
+  }else if(name.length<4){
+    return false;
+  }else if (name.includes("\ ")){
+    return false;
+  }else{
+    return true;
+  }
 }
 
 /**
@@ -32,6 +37,4 @@ function sayHello() {
 }
 
 sayHello('user');
-```
-
-
+ 
